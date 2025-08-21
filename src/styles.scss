@@ -1,0 +1,273 @@
+/* ========================
+   Variables
+======================== */
+$primary-color: #6c63ff;
+$secondary-color: #ff6584;
+$success-color: #4caf50;
+$error-color: #f44336;
+$warning-color: #ff9800;
+
+$bg-color: #f4f4f4;
+$text-color: #333;
+$border-color: #ccc;
+
+$radius: 8px;
+$font-stack: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+/* ========================
+   Global Reset
+======================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-stack;
+  background-color: $bg-color;
+  color: $text-color;
+  line-height: 1.6;
+  padding: 2rem;
+}
+
+/* ========================
+   Typography
+======================== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 1rem;
+  color: $primary-color;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* ========================
+   Links
+======================== */
+a {
+  color: $primary-color;
+  text-decoration: none;
+  transition: color 0.3s;
+
+  &:hover {
+    color: $secondary-color;
+    text-decoration: underline;
+  }
+}
+
+/* ========================
+   Buttons
+======================== */
+button,
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: $radius;
+  border: none;
+  background-color: $primary-color;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  &:disabled {
+    background-color: $border-color;
+    cursor: not-allowed;
+    transform: none;
+  }
+}
+
+/* Variants */
+.btn-secondary {
+  background-color: $secondary-color;
+}
+
+.btn-success {
+  background-color: $success-color;
+}
+
+.btn-error {
+  background-color: $error-color;
+}
+
+/* ========================
+   Inputs & Forms
+======================== */
+input,
+textarea,
+select {
+  padding: 0.5rem;
+  border: 2px solid $border-color;
+  border-radius: $radius;
+  outline: none;
+  transition: border 0.3s, box-shadow 0.3s;
+
+  &:focus {
+    border-color: $primary-color;
+    box-shadow: 0 0 5px rgba($primary-color, 0.4);
+  }
+
+  &:disabled {
+    background: #eee;
+    cursor: not-allowed;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 400px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: $radius;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* ========================
+   Lists
+======================== */
+ul,
+ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* ========================
+   Tables
+======================== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+th,
+td {
+  padding: 0.75rem;
+  border: 1px solid $border-color;
+  text-align: left;
+}
+
+th {
+  background-color: $primary-color;
+  color: #fff;
+}
+
+/* ========================
+   Layout Helpers
+======================== */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Spacing Utilities */
+@for $i from 1 through 5 {
+  .m-#{$i} {
+    margin: #{$i}rem !important;
+  }
+  .p-#{$i} {
+    padding: #{$i}rem !important;
+  }
+  .mb-#{$i} {
+    margin-bottom: #{$i}rem !important;
+  }
+  .mt-#{$i} {
+    margin-top: #{$i}rem !important;
+  }
+}
+
+/* ========================
+   Debug Helpers
+======================== */
+.debug-border {
+  border: 2px dashed red;
+}
+
+.bg-test {
+  background: rgba(255, 0, 0, 0.1);
+}
+
+.bg-primary {
+  background-color: $primary-color;
+  color: #fff;
+}
+
+.bg-secondary {
+  background-color: $secondary-color;
+  color: #fff;
+}
+
+.bg-success {
+  background-color: $success-color;
+  color: #fff;
+}
+
+.bg-error {
+  background-color: $error-color;
+  color: #fff;
+}
+
+/* ========================
+   Misc
+======================== */
+hr {
+  border: none;
+  border-top: 1px solid $border-color;
+  margin: 1rem 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  border-radius: $radius;
+}
