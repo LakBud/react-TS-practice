@@ -1,7 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App.tsx";
-import MyProvider from "./components/useContext/MyContext.tsx";
+import MyProvider from "./TS/useContext/MyContext.tsx";
 import "./index.css";
 import "./styles.scss";
 

@@ -24,9 +24,9 @@ const AdvancedForm = () => {
 
   return (
     <div className="max-w-2xl mx-auto mt-10 p-10 rounded-2xl">
-      <h2 className="text-2xl font-bold text-center mb-6 text-indigo-600 m-2">Registration Form</h2>
+      <h2 className="text-2xl font-bold text-center mb-6 text-indigo-600 m-2 p-1">Registration Form</h2>
 
-      <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
+      <form onSubmit={handleSubmit(onSubmit)} className="space-y-5 mb-4">
         {/* First Name */}
         <div>
           <label htmlFor="firstName" className="block font-medium mb-1">

@@ -1,0 +1,51 @@
+Stable Features in React 19
+
+Compiler
+
+Automatically optimizes rendering by memoizing components and hooks
+
+Reduces unnecessary re-renders without manual useMemo, useCallback, or React.memo
+
+Memorization
+
+Automatic memoization of values and callbacks through the Compiler
+
+Manual memoization is optional
+
+Metadata
+
+Declarative way to define document metadata (title, meta tags, links, styles) within React components
+
+Improves SEO and keeps metadata colocated with the relevant component
+
+Directives
+
+"use client": marks a component as client-side
+
+"use server": marks a function as a server action
+
+Provides runtime hints for the compiler and React runtime
+
+use() Hook
+
+Allows components to suspend while waiting for promises
+
+Simplifies async data fetching and integrates with Suspense
+
+useActionState
+
+Tracks the state of an async action, providing the current state, action function, and pending status
+
+Manages loading, success, and error states efficiently
+
+useFormStatus
+
+Lets nested components read the status of their parent form (e.g., pending submission)
+
+Useful for disabling buttons or showing loading states in child components
+
+useOptimistic
+
+Supports optimistic UI updates
+
+Temporarily updates the UI before the async operation completes and then reconciles with actual results
