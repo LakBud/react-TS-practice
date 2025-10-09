@@ -1,0 +1,36 @@
+API: https://jsonplaceholder.typicode.com/todos/
+
+Query Client:
+The heart of the TanStack Query that manages the state and configuration of queries and mutations in our app. It serves as the primary API for interacting with the library, enabling us to perform actions like fetching data, managing cache, and setting global configurations. Check main.tsx
+
+
+useQuery({queryKey: ["todo"], queryFn: fetchData}):
+1. useQuery() = function that helps us fetch and manage server data.
+
+2. queryKey: ["todo"] = a unique identifier for the query, Its like saying "We are working with the todo items".
+
+3. queryFn: {fetchData} = this specifies the function (fetchData) that will actually get the data. It will be called to retrieve the todo items.
+
+Deduplication
+Means if we try to fetch the same data multiple times at once, it will only send one request at a time instead of many. Helps avoid asking for the same data over and over again.
+
+Devtools
+You can have devtools with tanstack router. Gives info about the fetching, query, etc. Look at main.tsx for the provider.
+
+Stale time
+Stale time refers to the duration during which cached data is considered fresh. During this period, the data is served from the cache without triggering a background refetch, which can improve performance and reduce unnecessary network requests. staleTime: seconds
+
+refetchInterval
+An option used to automatically refetch data at a specified interval. It allows us to keep our data fresh without requiring manual intervention.
+
+
+useQueries
+A hook which allows us to execute multiple queries in parallel and manage their results in a unified way. This is useful when you need to fetch data from multiple sources or endpoints in a single component but want to handle each querys state separately.
+useQueries({queries: []})
+
+useMutation
+A hook used to handle mutative operations, operations that create, update, or delete data on a backend or remote server. Unlike useQuery, which is used for fetching and caching data, useMutation is specifically designed for actions that change data.
+
+useInfiniteQuery
+A hook which lets you fetch multiple pages progressively.
+Great for infinite scroll, load more, paginated lists, etc.

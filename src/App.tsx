@@ -1,9 +1,9 @@
-import Dashboard from "./Projects/Filteration/Components/Dashboard";
+import InfiniteQueries from "./tanstack-query/InfiniteQueries";
 
 const App = () => {
   return (
-    <div className="flex h-screen">
-      <Dashboard />
+    <div>
+      <InfiniteQueries />
     </div>
   );
 };
